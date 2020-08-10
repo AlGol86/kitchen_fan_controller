@@ -160,7 +160,7 @@ out_t calculated_stage(input_data_t temerature_data,current_stage_t* current_sta
 		if ((tt2==1)&&(current_stage->hotplate_2)&&(t2<=60))aux_level++;
 		if ((tt3==1)&&(current_stage->hotplate_3)&&(t3<=60))aux_level++;
 		if ((tt4==1)&&(current_stage->hotplate_4)&&(t4<=60))aux_level++;
-	  if ((tt1==2)&&(t1<=60)) {aux_level++;current_stage->hotplate_1=1;}
+	        if ((tt1==2)&&(t1<=60)) {aux_level++;current_stage->hotplate_1=1;}
 		if ((tt2==2)&&(t2<=60)) {aux_level++;current_stage->hotplate_2=1;}
 		if ((tt3==2)&&(t3<=60)) {aux_level++;current_stage->hotplate_3=1;}
 		if ((tt4==2)&&(t4<=60)) {aux_level++;current_stage->hotplate_4=1;}
