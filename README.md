@@ -5,4 +5,4 @@ It's actually useful if it is used a gas hotpoints.
 ## This device consists of:
   * MCU (stm8s103)
   * 4pcs. Temperature sensors (lm75a)
-## In basic case device can control cooker hood with electronic communications.
+   In basic case device can control cooker hood with electronic communications.
