@@ -8,4 +8,4 @@ It's actually useful if it is used a gas hotpoints.
 
   In basic case device can control cooker hood with electronic communications.
 ## Device appearance:
-![appearance](https://github.com/AlGol86/kitchen_fan_controller/Pictures/cooker_hood_control.jpg)
+![appearance](https://github.com/AlGol86/kitchen_fan_controller/blob/master/Pictures/cooker_hood_control.jpg)
