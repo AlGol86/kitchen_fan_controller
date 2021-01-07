@@ -26,8 +26,8 @@ struct interrupt_vector {
 	int* int_pointer=&input_data.t1[0];
 	TIM1->SR1&=~TIM1_SR1_UIF;//flag "0"
 	for(j=0;j<4;j++)
-		for(i=3;i>0;i--)
-			*(int_pointer+i+j*4)=*(int_pointer+i-1+j*4);
+		for(i=7;i>0;i--)
+			*(int_pointer+i+j*8)=*(int_pointer+i-1+j*8);
 	input_data.t1[0]= get_temp(address_iic_lm75_1);
   input_data.t2[0]= get_temp(address_iic_lm75_2);
 	input_data.t3[0]= get_temp(address_iic_lm75_3);
@@ -39,9 +39,13 @@ struct interrupt_vector {
 	    else {
 			input_data.t_err=norm;
 			for(i=0;i<4;i++){
-			if (((*(int_pointer+i*4))>(*(int_pointer+i*4+1)))&&\
-			((*(int_pointer+i*4+1))>(*(int_pointer+i*4+2)))&&\
-			((*(int_pointer+i*4+2))>(*(int_pointer+i*4+3)))) input_data.tt[i]=2;
+			if (((*(int_pointer+i*8))>(*(int_pointer+i*8+1)))&&\
+			((*(int_pointer+i*8+1))>(*(int_pointer+i*8+2)))&&\
+			((*(int_pointer+i*8+2))>(*(int_pointer+i*8+3)))&&\
+                        ((*(int_pointer+i*8+3))>(*(int_pointer+i*8+4)))&&\
+                        ((*(int_pointer+i*8+4))>(*(int_pointer+i*8+5)))&&\
+                        ((*(int_pointer+i*8+5))>(*(int_pointer+i*8+6)))&&\
+                        ((*(int_pointer+i*8+6))>(*(int_pointer+i*8+7)))) input_data.tt[i]=2;
 			else 	if (((*(int_pointer+i*4))>(*(int_pointer+i*4+1)))||\
 			((*(int_pointer+i*4+1))>(*(int_pointer+i*4+2)))||\
 			((*(int_pointer+i*4+2))>(*(int_pointer+i*4+3)))) input_data.tt[i]=1;
