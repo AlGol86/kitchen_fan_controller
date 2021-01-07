@@ -75,10 +75,10 @@ norm,error_t1,error_t2,error_t3,error_t4} error_t ;
 
 typedef struct 
 {
-	int t1[4];
-	int t2[4];
-	int t3[4];
-	int t4[4];
+	int t1[8];
+	int t2[8];
+	int t3[8];
+	int t4[8];
 	char tt[4];
 	error_t t_err; 
 	char actual_stage;
